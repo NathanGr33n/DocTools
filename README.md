@@ -40,18 +40,17 @@ dotnet tool install --global --add-source ./src/DocTools.CLI/nupkg
 ```
 
 ## Usage
-
-### Basic Usage
+# DocTools CLI:
 
 ```bash
 # Document a single file (with inline comments)
-Doctools.CLI MyFile.cs
+dt MyFile.cs
 
 # Document an entire directory (non-recursive)
-Doctools.CLI ./src
+dt ./src
 
 # Document directory recursively
-Doctools.CLI ./src --recursive
+dt ./src --recursive
 ```
 
 ### API Key Configuration
@@ -59,7 +58,7 @@ Doctools.CLI ./src --recursive
 **Option 1**: Command-line flag
 
 ```bash
-doctools.CLI MyFile.cs --api-key sk-...
+dt MyFile.cs --api-key sk-...
 ```
 
 **Option 2**: Environment variable
@@ -67,15 +66,15 @@ doctools.CLI MyFile.cs --api-key sk-...
 ```bash
 # Windows PowerShell
 $env:OPENAI_API_KEY="sk-..."
-doctools.CLI MyFile.cs
+dt MyFile.cs
 
 # Windows CMD
 set OPENAI_API_KEY=sk-
-doctools.CLI MyFile.cs
+dt MyFile.cs
 
 # Linux/Mac
 export OPENAI_API_KEY="sk-..."
-Doctools.CLI MyFile.cs
+dt MyFile.cs
 ```
 
 ### Command-Line Options
@@ -93,22 +92,22 @@ Doctools.CLI MyFile.cs
 
 ```bash
 # Create .md documentation file
-doctools.CLI MyService.cs --output markdown
+dt MyService.cs --output markdown
 ```
 
 #### Enterprise-style Documentation
+
 ```bash
 # Use enterprise-style XML/JSDoc comments
-doctools.CLI MyController.cs --style enterprise
+dt MyController.cs --style enterprise
 ```
 
 #### Batch Process a Directory
+
 ```bash
 # Process all supported files in directory recursively
-doctools.CLI ./src --recursive --style full --output markdown
+dt ./src --recursive --style full --output markdown
 ```
-
-## Project Structure
 
 ```
 DocTools/
