@@ -16,15 +16,12 @@ class Program
     static async Task<int> Main(string[] args)
     {
         // Create root command
-        var rootCommand = new RootCommand("DocTools - AI-powered code documentation generator")
-        {
-            Name = "dt"
-        };
-        
-        // Add usage examples
-        rootCommand.AddExample(new[] { "./src/MyFile.cs" });
-        rootCommand.AddExample(new[] { "./src", "-r" });
-        rootCommand.AddExample(new[] { "./src", "-r", "-s", "minimal", "-o", "markdown" });
+        var rootCommand = new RootCommand(@"DocTools - AI-powered code documentation generator
+
+Examples:
+  dt ./src/MyFile.cs
+  dt ./src -r
+  dt ./src -r -s minimal -o markdown");
 
         // Define options
         var pathArgument = new Argument<string>(
