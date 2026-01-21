@@ -37,7 +37,7 @@ class Program
 
         var styleOption = new Option<DocumentationStyle>(
             aliases: new[] { "--style", "-s" },
-            getDefaultValue: () => DocumentationStyle.Full,
+            getDefaultValue: () => DocumentationStyle.Minimal,
             description: "Documentation style: minimal, full, or enterprise");
 
         var outputOption = new Option<OutputMode>(
