@@ -40,42 +40,18 @@ dotnet tool install --global --add-source ./src/DocTools.CLI/nupkg
 ```
 
 ## Usage
-
-### Basic Usage
+# DocTools CLI:
 
 ```bash
 # Document a single file (with inline comments)
-Doctools.CLI MyFile.cs
+dt MyFile.cs
 
 # Document an entire directory (non-recursive)
-Doctools.CLI ./src
+dt ./src
 
 # Document directory recursively
-Doctools.CLI ./src --recursive
+dt ./src --recursive
 ```
-
-### API Key Configuration
-
-**Option 1**: Command-line flag
-
-```bash
-doctools.CLI MyFile.cs --api-key sk-...
-```
-
-**Option 2**: Environment variable
-
-```bash
-# Windows PowerShell
-$env:OPENAI_API_KEY="sk-..."
-doctools.CLI MyFile.cs
-
-# Windows CMD
-set OPENAI_API_KEY=sk-
-doctools.CLI MyFile.cs
-
-# Linux/Mac
-export OPENAI_API_KEY="sk-..."
-Doctools.CLI MyFile.cs
 ```
 
 ### Command-Line Options
